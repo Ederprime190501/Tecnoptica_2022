@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Tecnoptica 2022-1 | Recetas</title>
+    <link rel="shortcut icon" href="recursos/img/lentes.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <script src="js/perfil.js"></script>
+    
+</head>
+<body>
+   
+   <!--Menu de Navegación-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html" style="font-family: lobster; font-size: 30px; color: #707070;">Tecnoptica 2022</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-family: montserrat; font-size: 15px; color: #707070;">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conocenos.html">Conocenos</a>
+                        </li>        
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contactanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Administrar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="recetas.html">Recetas</a></li>
+                                <li><a class="dropdown-item" href="#">Clientes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-primary login d-flex" role="button" href="perfil.html" style="font-family: montserrat; font-size: 15px;">TecnoTeam 2.0</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+      
+    <!--Modal-->
+    <main role="main" class="tabla">     
+        <hr style="border:0px">
+        <div class="container"> 
+            <div class="card">
+                <h4 class="card-header" style="font-family: montserrat; font-size: 25px; color: #707070;"><strong>Administración de Recetas</strong></h4>              
+                <div class="card-body">
+                    <!--Modal-->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nueva</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Nueva Receta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Nombre Completo" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Fecha</label>
+                                            <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion derecha</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion Izquierda</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Costo</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Armazon</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Material</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Observaciones</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Fin del Modal-->      
+                    <hr>
+                    <table class="table table-hover" style="color: #707070;">
+                        <thead class="thead" style="background: #E1E1E1;">
+                            <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>                  
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Armazon</th>
+                            <th scope="col">Costo</th>
+                            <th scope="col">Observaciones</th>
+                            <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Marquez Sanchez Eder</td>                  
+                                <td>11-01-2022</td>
+                                <td>Azul plateado</td>
+                                <td>$1450.00</td>
+                                <td>Mas aumento en el ojo derecho que en el izquierdo</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" role="button" title="Editar el registro." data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Actualizar Receta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Marquez Sanchez Eder" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Fecha</label>
+                                            <input type="date" class="form-control" value="11-01-2022">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion derecha</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.75">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion Izquierda</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.50">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Costo</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="1450">
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Armazon</label>
+                                            <input type="text" class="form-control" placeholder="Azul Plateado">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Material</label>
+                                            <input type="text" class="form-control" placeholder="Plastico">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Observaciones</label>
+                                            <textarea class="form-control" id="message-text">Mas aumento en el ojo derecho que en el izquierdo</textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Fin del Modal-->     
+                                    <a href="#" onclick="return confirm('¿Estas seguro de querer eliminar?')" class="btn btn-danger btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Flores Sala Francisco</td>                  
+                                <td>10-02-2022</td>
+                                <td>Azul Marino</td>
+                                <td>$1400.00</td>
+                                <td>Mas aumento en el ojo izquiero que en el derecho</td>
+                                <td>
+                                   <a href="#" class="btn btn-primary btn-sm" role="button" title="Editar el registro." data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Actualizar Receta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Flores Salas Francisco" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Fecha</label>
+                                            <input type="date" class="form-control" value="10-02-2022">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion derecha</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.50">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion Izquierda</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.70">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Costo</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="1400">
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Armazon</label>
+                                            <input type="text" class="form-control" placeholder="Azul Marino">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Material</label>
+                                            <input type="text" class="form-control" placeholder="Plastico">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Observaciones</label>
+                                            <textarea class="form-control" id="message-text">Mas aumento en el ojo ozquierdo que en el derecho</textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Fin del Modal-->  
+                                    <a href="#" onclick="return confirm('¿Estas seguro de querer eliminar?')" class="btn btn-danger btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Arreortua Tapia Samuel</td>                  
+                                <td>15-03-2022</td>
+                                <td>Azul Bronce</td>
+                                <td>$1450.00</td>
+                                <td>Mas aumento en el ojo derecho que en el izquierdo</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" role="button" title="Editar el registro." data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-whatever="@mdo"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Actualizar Receta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Arreortua Tapia Samuel" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Fecha</label>
+                                            <input type="date" class="form-control" value="15-03-2022">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion derecha</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.75">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Graduacion Izquierda</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.50">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Costo</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="1450">
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Armazon</label>
+                                            <input type="text" class="form-control" placeholder="Azul Bronce">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Material</label>
+                                            <input type="text" class="form-control" placeholder="Plastico">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Observaciones</label>
+                                            <textarea class="form-control" id="message-text">Mas aumento en el ojo derecho que en el izquierdo</textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Fin del Modal--> 
+                                    <a href="#" onclick="return confirm('¿Estas seguro de querer eliminar?')" class="btn btn-danger btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                </table>
+                </div>
+            </div>
+        </div> <!-- /container -->
+    </main><br><br><br><br><br><br>
+   <!--Footer-->
+    <div class="footer" style="font-family: montserrat; font-size: 15px; color: #FFF; background: #707070; padding: 20px;">
+        Copyright@ Derechos Reservados TecnoTeam 2.0 2022-1
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
